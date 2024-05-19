@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>head and tail recursion</title>
+    <script>
+        function colors(){
+            let data = 20;
+            console.log(data)
+            if(true){
+                console.log(data*20)
+            }else{
+                console.log(data/20)
+            }
+        }
+        function days(){
+            colors()
+        }
+        function fruit(){
+            days()
+        }
+        function topFunction(){
+            fruit()
+        }
+        topFunction();
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
