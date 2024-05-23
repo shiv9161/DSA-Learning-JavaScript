@@ -22,7 +22,12 @@
             }
         }
         pop() {
-
+            if(this.currentSize>0){
+                this.currentSize--;
+                this.item.length=this.currentSize;
+            }else{
+                alert("Stack is alredy empty")
+            }
         }
         display() {
             console.log(this.item)
