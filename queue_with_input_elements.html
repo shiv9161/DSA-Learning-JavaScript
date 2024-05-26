@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Queue with input element</title>
+    <script>
+      let queue = [];
+      let currentSize = queue.length;
+      let maxSize = 5;
+      
+      function enqueueWithBtn() {
+        let newVal = document.getElementById('qEl').value;
+        if (currentSize >= maxSize) {
+          alert("Queue is alredy full");
+        } else {
+          queue[currentSize] = newVal;
+          currentSize++;
+        }
+      }
+
+      function display() {
+        console.log(queue);
+      }
+
+      function dequeue() {
+        if (currentSize > 0) {
+          for (let i = 0; i < queue.length; i++) {
+            queue[i] = queue[i + 1];
+          }
+          currentSize--;
+          queue.length = currentSize;
+        } else {
+          alert("Queue is alredy empty");
+        }
+      }
+
+      function front() {
+        if (currentSize > 0) {
+          console.log(queue[0]);
+        } else {
+          alert("Queue is alredy empty");
+        }
+      }
+
+      function rear() {
+        if (!isEmpty()) {
+          console.log(queue[currentSize - 1]);
+        } else {
+          alert("Queue is alredy empty");
+        }
+      }
+
+      function isEmpty() {
+        if (currentSize < 0) {
+          return true;
+        } else {
+          return false;
+        }
+      }
+
+    </script>
+  </head>
+  <body>
+    <h1>Queue with inout elements in JavaScript</h1>
+    <input type="text" placeholder="Enter element" id="qEl" />
+    <button onclick="enqueueWithBtn()">Add Element</button>
+    <button onclick="dequeue()">Remove Element</button>
+    <button onclick="display()">Display Element</button>
+    <button onclick="front()">Get front Element</button>
+    <button onclick="rear()">Get Rear Element</button>
+  </body>
+</html>
