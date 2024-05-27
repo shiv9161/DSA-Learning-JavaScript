@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        let data = [1, 2, 4, 9, 8 ,5 ,3 ];
+        // for(let i = 0; i < data.length; i++){
+        //     document.write(`Array ${i} is ${data[i]} <br/>`)
+        // }
+        // document.write(data[0]) 
+        const getElement = () => {
+            
+            let el = document.getElementById('element').value;
+
+            if(el < data.length  && typeof parseInt(el) === "number"){
+            alert(data[el])
+            }else{
+                alert("Number can not found in data")
+            }
+           
+        }
+    </script>
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="getElement()">Get Element</button>
+</body>
+</html>

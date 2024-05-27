@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Liner saerch</title>
+    <script>
+      // let data = [10, 13 , 76, 89, 56, 99, 69];
+      // let find = 100;
+      // let pos = undefined
+      // for(let i = 0; i<=data.length; i++){
+      //     if(data[i]==find){
+      //         pos = i;
+      //         break;
+      //     }
+      // }
+      // if(!pos){
+      //     alert("Element is not found")
+      // }
+      // console.log(pos)
+      function searchEl() {
+        let data = [10, 13, 76, 89, 56, 99, 69];
+        let find = document.getElementById("el").value;
+        let pos = undefined;
+        for (let i = 0; i <= data.length; i++) {
+          if (data[i] == find) {
+            pos = i;
+            break;
+          }
+        }
+        if (!pos) {
+          alert("Element is not found");
+        }else{
+            alert("Element positon is "+pos)
+        }
+        console.log(pos);
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter element" id="el" />
+    <button onclick="searchEl()">Search Element</button>
+  </body>
+</html>

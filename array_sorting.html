@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>array sorting</title>
+    <script>
+        let data = [35, 12, 25, 40, 95, 54, 79, 81]
+        for(i = 0; i<data.length; i++){
+            for(j = 0; j<data.length; j++){
+                if(data[j]>data[j+1]){
+                    let temp = data[j];
+                    data[j] = data[j+1]
+                    data[j+1] = temp
+                }
+            }
+        }
+        console.log(data)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
