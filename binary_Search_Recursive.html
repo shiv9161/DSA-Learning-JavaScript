@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binary - Recursive</title>
+    <script>
+        let data = [10, 15, 20, 25, 30, 35]
+        let start = 0;
+        let end = data.length-1;
+        let find = 35;
+        let position = undefined;
+        function recursiveBinary(item, start, end){
+            mid = Math.floor((start+end)/2);
+            // console.log(mid)
+            if(data[mid]===find){
+                position = mid
+                return true;
+            }else if(data[mid]<find){
+                recursiveBinary(data, mid+1, end)
+            }else{
+                recursiveBinary(data, start, mid-1)
+            }
+        }
+        recursiveBinary(data, start, end)
+        console.log(position)
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
