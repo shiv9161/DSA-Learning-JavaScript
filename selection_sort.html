@@ -7,10 +7,8 @@
     <script>
       let items = [20, 12, 53, 3];
       function selectionSort(data) {
-        // console.log(data)
         let minId;
         for (let i = 0; i < data.length; i++) {
-          // console.log(data[i])
           minId = i;
           for (let j = i + 1; j < data.length; j++) {
             if(data[j]<data[minId]){
