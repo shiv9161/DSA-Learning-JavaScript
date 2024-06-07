@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Max - Occuring</title>
+    <script>
+      let str = "hello world";
+      let strObj = {};
+      let maxKey = "";
+      for (let i = 0; i < str.length; i++) {
+        // console.log(str[i]);
+        let key = str[i];
+        if (!strObj[key]) {
+          strObj[key] = 0;
+        }
+        strObj[key]++;
+        if (maxKey == "" || strObj[key] > strObj[maxKey]) {
+          maxKey = key;
+        }
+      }
+      console.log(maxKey);
+      console.log(strObj)
+    </script>
+  </head>
+  <body></body>
+</html>
